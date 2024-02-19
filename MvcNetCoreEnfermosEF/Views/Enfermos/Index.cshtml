@@ -1,0 +1,27 @@
+﻿@model List<Enfermo>
+
+<h1>Enfermos Entity Framework</h1>
+
+<table class="table table-borderless">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Dirección</th>
+            <th>Fecha Nacimiento</th>
+            <th>Sexo</th>
+            <th>NSS</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Enfermo enf in Model)
+        {
+            <tr>
+                <td>@enf.Apellido</td>
+                <td>@enf.Direccion</td>
+                <td>@enf.FechaNacimiento</td>
+                <td>@enf.Sexo</td>
+                <td>@enf.NSS</td>
+            </tr>
+        }
+    </tbody>
+</table>
