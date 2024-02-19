@@ -1,0 +1,18 @@
+﻿@model Enfermo
+
+<h1>Detalles Enfermo EF</h1>
+<a asp-controller="Enfermos" asp-action="Index" class="btn btn-primary my-3 w-100">Volver a Index</a>
+
+<h2 class="text-danger text-center">@ViewData["MENSAJE"]</h2>
+
+@if (Model != null)
+{
+    <ul class="list-group">
+        <li class="list-group-item">Inscripción: @Model.Inscripcion</li>
+        <li class="list-group-item">Apellido: @Model.Apellido</li>
+        <li class="list-group-item">Dirección: @Model.Direccion</li>
+        <li class="list-group-item">Fecha Nacimiento: @Model.FechaNacimiento</li>
+        <li class="list-group-item">Sexo: @Model.Sexo</li>
+        <li class="list-group-item">NSS: @Model.NSS</li>
+    </ul>
+}

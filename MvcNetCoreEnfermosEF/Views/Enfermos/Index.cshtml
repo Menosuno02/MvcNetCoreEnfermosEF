@@ -2,14 +2,13 @@
 
 <h1>Enfermos Entity Framework</h1>
 
-<table class="table table-borderless">
+<table class="table table-borderless mt-3">
     <thead>
         <tr>
             <th>Apellido</th>
-            <th>Dirección</th>
             <th>Fecha Nacimiento</th>
             <th>Sexo</th>
-            <th>NSS</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -17,10 +16,12 @@
         {
             <tr>
                 <td>@enf.Apellido</td>
-                <td>@enf.Direccion</td>
                 <td>@enf.FechaNacimiento</td>
                 <td>@enf.Sexo</td>
-                <td>@enf.NSS</td>
+                <td>
+                    <a asp-controller="Enfermos" asp-action="Details"
+                       asp-route-id="@enf.Inscripcion" class="btn btn-primary btn-sm">Details</a>
+                </td>
             </tr>
         }
     </tbody>

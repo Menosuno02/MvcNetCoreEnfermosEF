@@ -18,5 +18,17 @@ namespace MvcNetCoreEnfermosEF.Repositories
                            select datos;
             return consulta.ToList();
         }
+
+        public Enfermo FindEnfermo(int id)
+        {
+            var consulta = from datos in this.context.Enfermos
+                           where datos.Inscripcion == id
+                           select datos;
+            if (consulta.Count() == 0)
+            {
+                return null;
+            }
+            return consulta.First();
+        }
     }
 }
